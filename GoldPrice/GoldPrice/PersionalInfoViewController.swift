@@ -11,14 +11,19 @@ import UIKit
 class PersionalInfoViewController: UIViewController {
 
     @IBOutlet weak var avatarImageView: UIImageView!
-    @IBAction func closeTapped(_ sender: Any) {
-        removeAnimate()
-    }
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
+        //Set persional info
+        let persionalInfo = PersonalInfo(name: "Pham Thanh Hung", email: "hungpt.0506@gmail.com")
+        nameLabel.text = persionalInfo.name
+        emailLabel.text = persionalInfo.email
+        
+        //Custom image view to circle
         avatarImageView.layer.borderWidth = 1
         avatarImageView.layer.masksToBounds = false
         avatarImageView.layer.borderColor = UIColor(hexString: "#0F85D1").cgColor
@@ -31,6 +36,10 @@ class PersionalInfoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func closeTapped(_ sender: Any) {
+        removeAnimate()
     }
     
     func showAnimate()

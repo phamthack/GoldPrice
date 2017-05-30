@@ -31,6 +31,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
+        cell.layer.transform = CATransform3DMakeScale(0.1,0.1,1)
+        UIView.animate(withDuration: 0.3, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1,1,1)
+        })
+        UIView.animate(withDuration: 1, animations: {
+            cell.layer.transform = CATransform3DMakeScale(2,2,2)
+        })
+        UIView.animate(withDuration: 0.3, animations: {
+            cell.layer.transform = CATransform3DMakeScale(1,1,1)
+        })
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/mm/yyyy"
@@ -113,13 +123,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 })
             }
             catch {
-                print("json error: \(error)")
+                self.showMessage(_message: error.localizedDescription)
             }
             }.resume()
     }
     
     func setDateInfo() {
-        let date = NSDate()
+        let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM yyyy"
         monthyearLabel.text = dateFormatter.string(from:date as Date)
@@ -152,29 +162,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         )
         
         self.lineChartView.addSubview(chart.view)
-
-//        
-//        let f: (CGFloat) -> CGPoint = {
-//            let noiseY = (CGFloat(arc4random_uniform(2)) * 2 - 1) * CGFloat(arc4random_uniform(4))
-//            let noiseX = (CGFloat(arc4random_uniform(2)) * 2 - 1) * CGFloat(arc4random_uniform(4))
-//            let b: CGFloat = 5
-//            let y = 2 * $0 + b + noiseY
-//            return CGPoint(x: $0 + noiseX, y: y)
-//        }
-//        
-//        var xs = [Double]()
-//        
-//        for goldPriceInfo in goldPriceInfoList {
-//            xs.append(Double(goldPriceInfo.amount)!)
-//        }
-//        
-//        let points = xs.map({f(CGFloat($0 * 10))})
-//
-//        lineChart.deltaX = 20
-//        lineChart.deltaY = 30
-//        
-//        lineChart.plot(points)
-
+    }
+    
+    func showMessage(_message: String) {
+        
+        // create the alert
+        let alert = UIAlertController(title: "Gold Price", message: _message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
