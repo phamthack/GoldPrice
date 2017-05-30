@@ -20,6 +20,8 @@
 		EF8890DA1EDC14D000DCD309 /* info_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8890D81EDC14D000DCD309 /* info_icon2x.png */; };
 		EF8890DF1EDC16A700DCD309 /* GoldPriceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890DE1EDC16A700DCD309 /* GoldPriceInfo.swift */; };
 		EF8890E11EDC16BF00DCD309 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890E01EDC16BF00DCD309 /* PersonalInfo.swift */; };
+		EFB6E1301EDDCFDB0073180F /* PersionalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E12F1EDDCFDB0073180F /* PersionalInfoViewController.swift */; };
+		EFB6E1331EDDD2900073180F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E1321EDDD2900073180F /* UIColorExtension.swift */; };
 		F3F63269A75C4108A52F6E20 /* Pods_GoldPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187B19A28C65433F19407FEE /* Pods_GoldPrice.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,9 @@
 		EF8890DE1EDC16A700DCD309 /* GoldPriceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldPriceInfo.swift; sourceTree = "<group>"; };
 		EF8890E01EDC16BF00DCD309 /* PersonalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
 		EF8890E41EDC8F1400DCD309 /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
+		EFA421801EDDDC6800A59569 /* MyriadPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Bold.otf"; sourceTree = "<group>"; };
+		EFB6E12F1EDDCFDB0073180F /* PersionalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersionalInfoViewController.swift; sourceTree = "<group>"; };
+		EFB6E1321EDDD2900073180F /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		F6271577D0A1FF643CAED315 /* Pods-GoldPriceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPriceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldPriceUITests/Pods-GoldPriceUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,13 +151,15 @@
 		EF8890A81EDC14A800DCD309 /* GoldPrice */ = {
 			isa = PBXGroup;
 			children = (
+				EFB6E1311EDDD2790073180F /* Extensions */,
+				EFB6E12E1EDDCFB00073180F /* PersionalInfo */,
 				EF8890DD1EDC159800DCD309 /* ClassInfo */,
 				EF8890DB1EDC155D00DCD309 /* Images */,
 				EF8890A91EDC14A800DCD309 /* AppDelegate.swift */,
 				EF8890AB1EDC14A800DCD309 /* ViewController.swift */,
 				EF8890AD1EDC14A800DCD309 /* Main.storyboard */,
 				EF8890B01EDC14A800DCD309 /* Assets.xcassets */,
-				EF8890E41EDC8F1400DCD309 /* Myriad Pro Regular.ttf */,
+				EFA421811EDDDEDC00A59569 /* Fonts */,
 				EF8890B21EDC14A800DCD309 /* LaunchScreen.storyboard */,
 				EF8890B51EDC14A800DCD309 /* Info.plist */,
 			);
@@ -193,6 +200,31 @@
 				EF8890E01EDC16BF00DCD309 /* PersonalInfo.swift */,
 			);
 			name = ClassInfo;
+			sourceTree = "<group>";
+		};
+		EFA421811EDDDEDC00A59569 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EFA421801EDDDC6800A59569 /* MyriadPro-Bold.otf */,
+				EF8890E41EDC8F1400DCD309 /* Myriad Pro Regular.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		EFB6E12E1EDDCFB00073180F /* PersionalInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E12F1EDDCFDB0073180F /* PersionalInfoViewController.swift */,
+			);
+			name = PersionalInfo;
+			sourceTree = "<group>";
+		};
+		EFB6E1311EDDD2790073180F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E1321EDDD2900073180F /* UIColorExtension.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,7 +513,9 @@
 				EF8890DF1EDC16A700DCD309 /* GoldPriceInfo.swift in Sources */,
 				EF8890E11EDC16BF00DCD309 /* PersonalInfo.swift in Sources */,
 				EF8890AC1EDC14A800DCD309 /* ViewController.swift in Sources */,
+				EFB6E1301EDDCFDB0073180F /* PersionalInfoViewController.swift in Sources */,
 				EF8890AA1EDC14A800DCD309 /* AppDelegate.swift in Sources */,
+				EFB6E1331EDDD2900073180F /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

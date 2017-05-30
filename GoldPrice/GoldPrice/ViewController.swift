@@ -9,28 +9,9 @@
 import UIKit
 import SwiftCharts
 
-extension UIColor {
-    convenience init(hexString: String) {
-        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int = UInt32()
-        Scanner(string: hex).scanHexInt32(&int)
-        let a, r, g, b: UInt32
-        switch hex.characters.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (255, 0, 0, 0)
-        }
-        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
-    }
-}
-
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lineChartView: UIView!
     
     @IBOutlet weak var dateLabel: UILabel!
@@ -51,9 +32,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        cell.textLabel?.text = goldPriceInfoList[indexPath.row].date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/mm/yyyy"
+        let date = dateFormatter.date(from: goldPriceInfoList[indexPath.row].date)
+        
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        let newDate = dateFormatter.string(from: date!)
+        
+        cell.textLabel?.textColor = UIColor(hexString: "#9DCDEC")
+        cell.textLabel?.text = newDate
+        
+        cell.detailTextLabel?.attributedText = NSAttributedString(string: " ")
         cell.detailTextLabel?.text = goldPriceInfoList[indexPath.row].amount
-                return cell
+        
+        cell.layoutSubviews()
+        return cell
     }
     
     override func viewDidLoad() {
@@ -64,6 +57,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let url = "https://rth-recruitment.herokuapp.com/api/prices/chart_data"
         
         get_data_from_url(url: url)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        titleLabel.isUserInteractionEnabled = true
+        titleLabel.addGestureRecognizer(tapGesture)
+    }
+    
+    func handleTap(_tapGesture: UITapGestureRecognizer) {
+        
+        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "persional_info_view") as! PersionalInfoViewController
+
+        self.addChildViewController(popvc)
+        
+        popvc.view.frame = self.view.frame
+        
+        self.view.addSubview(popvc.view)
+        
+        popvc.didMove(toParentViewController: self)
         
     }
     
