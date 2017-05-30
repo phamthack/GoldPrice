@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A60314D6B324BD6F8C177782 /* Pods_GoldPriceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40851A20B8278C19903644B /* Pods_GoldPriceUITests.framework */; };
+		D2C8B309DB4F0AD8CF255BA2 /* Pods_GoldPriceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35A8EF5E7302CCCAF22BD91 /* Pods_GoldPriceTests.framework */; };
+		EF8890AA1EDC14A800DCD309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890A91EDC14A800DCD309 /* AppDelegate.swift */; };
+		EF8890AC1EDC14A800DCD309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890AB1EDC14A800DCD309 /* ViewController.swift */; };
+		EF8890AF1EDC14A800DCD309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8890AD1EDC14A800DCD309 /* Main.storyboard */; };
+		EF8890B11EDC14A800DCD309 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8890B01EDC14A800DCD309 /* Assets.xcassets */; };
+		EF8890B41EDC14A800DCD309 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8890B21EDC14A800DCD309 /* LaunchScreen.storyboard */; };
+		EF8890BF1EDC14A800DCD309 /* GoldPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890BE1EDC14A800DCD309 /* GoldPriceTests.swift */; };
+		EF8890CA1EDC14A800DCD309 /* GoldPriceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890C91EDC14A800DCD309 /* GoldPriceUITests.swift */; };
+		EF8890D91EDC14D000DCD309 /* info_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8890D71EDC14D000DCD309 /* info_icon.png */; };
+		EF8890DA1EDC14D000DCD309 /* info_icon2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF8890D81EDC14D000DCD309 /* info_icon2x.png */; };
+		EF8890DF1EDC16A700DCD309 /* GoldPriceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890DE1EDC16A700DCD309 /* GoldPriceInfo.swift */; };
+		EF8890E11EDC16BF00DCD309 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890E01EDC16BF00DCD309 /* PersonalInfo.swift */; };
+		F3F63269A75C4108A52F6E20 /* Pods_GoldPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187B19A28C65433F19407FEE /* Pods_GoldPrice.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF8890BB1EDC14A800DCD309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF88909E1EDC14A800DCD309 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF8890A51EDC14A800DCD309;
+			remoteInfo = GoldPrice;
+		};
+		EF8890C61EDC14A800DCD309 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF88909E1EDC14A800DCD309 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF8890A51EDC14A800DCD309;
+			remoteInfo = GoldPrice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A4A1BD6C7C9680AB57E6F36 /* Pods-GoldPriceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPriceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldPriceTests/Pods-GoldPriceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		187B19A28C65433F19407FEE /* Pods_GoldPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3606BF82555E183884D093CF /* Pods-GoldPriceUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPriceUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldPriceUITests/Pods-GoldPriceUITests.release.xcconfig"; sourceTree = "<group>"; };
+		46517CB2E1170BEE99F8C13F /* Pods-GoldPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPrice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldPrice/Pods-GoldPrice.debug.xcconfig"; sourceTree = "<group>"; };
+		6F105481A0EEC141EEDEDA62 /* Pods-GoldPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPrice.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldPrice/Pods-GoldPrice.release.xcconfig"; sourceTree = "<group>"; };
+		8932389C360EA2798594E5BF /* Pods-GoldPriceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPriceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldPriceTests/Pods-GoldPriceTests.release.xcconfig"; sourceTree = "<group>"; };
+		A40851A20B8278C19903644B /* Pods_GoldPriceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldPriceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35A8EF5E7302CCCAF22BD91 /* Pods_GoldPriceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldPriceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF8890A61EDC14A800DCD309 /* GoldPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF8890A91EDC14A800DCD309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF8890AB1EDC14A800DCD309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF8890AE1EDC14A800DCD309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF8890B01EDC14A800DCD309 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF8890B31EDC14A800DCD309 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF8890B51EDC14A800DCD309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF8890BA1EDC14A800DCD309 /* GoldPriceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldPriceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF8890BE1EDC14A800DCD309 /* GoldPriceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldPriceTests.swift; sourceTree = "<group>"; };
+		EF8890C01EDC14A800DCD309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF8890C51EDC14A800DCD309 /* GoldPriceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoldPriceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF8890C91EDC14A800DCD309 /* GoldPriceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldPriceUITests.swift; sourceTree = "<group>"; };
+		EF8890CB1EDC14A800DCD309 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF8890D71EDC14D000DCD309 /* info_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon.png; sourceTree = "<group>"; };
+		EF8890D81EDC14D000DCD309 /* info_icon2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_icon2x.png; sourceTree = "<group>"; };
+		EF8890DE1EDC16A700DCD309 /* GoldPriceInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldPriceInfo.swift; sourceTree = "<group>"; };
+		EF8890E01EDC16BF00DCD309 /* PersonalInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
+		EF8890E41EDC8F1400DCD309 /* Myriad Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Myriad Pro Regular.ttf"; sourceTree = "<group>"; };
+		F6271577D0A1FF643CAED315 /* Pods-GoldPriceUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPriceUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoldPriceUITests/Pods-GoldPriceUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF8890A31EDC14A800DCD309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3F63269A75C4108A52F6E20 /* Pods_GoldPrice.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8890B71EDC14A800DCD309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2C8B309DB4F0AD8CF255BA2 /* Pods_GoldPriceTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8890C21EDC14A800DCD309 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A60314D6B324BD6F8C177782 /* Pods_GoldPriceUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6112F074D594F95ED41A4655 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46517CB2E1170BEE99F8C13F /* Pods-GoldPrice.debug.xcconfig */,
+				6F105481A0EEC141EEDEDA62 /* Pods-GoldPrice.release.xcconfig */,
+				0A4A1BD6C7C9680AB57E6F36 /* Pods-GoldPriceTests.debug.xcconfig */,
+				8932389C360EA2798594E5BF /* Pods-GoldPriceTests.release.xcconfig */,
+				F6271577D0A1FF643CAED315 /* Pods-GoldPriceUITests.debug.xcconfig */,
+				3606BF82555E183884D093CF /* Pods-GoldPriceUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		89D081E91363B89F25D9C280 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				187B19A28C65433F19407FEE /* Pods_GoldPrice.framework */,
+				B35A8EF5E7302CCCAF22BD91 /* Pods_GoldPriceTests.framework */,
+				A40851A20B8278C19903644B /* Pods_GoldPriceUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF88909D1EDC14A800DCD309 = {
+			isa = PBXGroup;
+			children = (
+				EF8890A81EDC14A800DCD309 /* GoldPrice */,
+				EF8890BD1EDC14A800DCD309 /* GoldPriceTests */,
+				EF8890C81EDC14A800DCD309 /* GoldPriceUITests */,
+				EF8890A71EDC14A800DCD309 /* Products */,
+				6112F074D594F95ED41A4655 /* Pods */,
+				89D081E91363B89F25D9C280 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EF8890A71EDC14A800DCD309 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF8890A61EDC14A800DCD309 /* GoldPrice.app */,
+				EF8890BA1EDC14A800DCD309 /* GoldPriceTests.xctest */,
+				EF8890C51EDC14A800DCD309 /* GoldPriceUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF8890A81EDC14A800DCD309 /* GoldPrice */ = {
+			isa = PBXGroup;
+			children = (
+				EF8890DD1EDC159800DCD309 /* ClassInfo */,
+				EF8890DB1EDC155D00DCD309 /* Images */,
+				EF8890A91EDC14A800DCD309 /* AppDelegate.swift */,
+				EF8890AB1EDC14A800DCD309 /* ViewController.swift */,
+				EF8890AD1EDC14A800DCD309 /* Main.storyboard */,
+				EF8890B01EDC14A800DCD309 /* Assets.xcassets */,
+				EF8890E41EDC8F1400DCD309 /* Myriad Pro Regular.ttf */,
+				EF8890B21EDC14A800DCD309 /* LaunchScreen.storyboard */,
+				EF8890B51EDC14A800DCD309 /* Info.plist */,
+			);
+			path = GoldPrice;
+			sourceTree = "<group>";
+		};
+		EF8890BD1EDC14A800DCD309 /* GoldPriceTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF8890BE1EDC14A800DCD309 /* GoldPriceTests.swift */,
+				EF8890C01EDC14A800DCD309 /* Info.plist */,
+			);
+			path = GoldPriceTests;
+			sourceTree = "<group>";
+		};
+		EF8890C81EDC14A800DCD309 /* GoldPriceUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF8890C91EDC14A800DCD309 /* GoldPriceUITests.swift */,
+				EF8890CB1EDC14A800DCD309 /* Info.plist */,
+			);
+			path = GoldPriceUITests;
+			sourceTree = "<group>";
+		};
+		EF8890DB1EDC155D00DCD309 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EF8890D71EDC14D000DCD309 /* info_icon.png */,
+				EF8890D81EDC14D000DCD309 /* info_icon2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		EF8890DD1EDC159800DCD309 /* ClassInfo */ = {
+			isa = PBXGroup;
+			children = (
+				EF8890DE1EDC16A700DCD309 /* GoldPriceInfo.swift */,
+				EF8890E01EDC16BF00DCD309 /* PersonalInfo.swift */,
+			);
+			name = ClassInfo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF8890A51EDC14A800DCD309 /* GoldPrice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF8890CE1EDC14A800DCD309 /* Build configuration list for PBXNativeTarget "GoldPrice" */;
+			buildPhases = (
+				C4EEB5CA03FA50C4F76100DC /* [CP] Check Pods Manifest.lock */,
+				EF8890A21EDC14A800DCD309 /* Sources */,
+				EF8890A31EDC14A800DCD309 /* Frameworks */,
+				EF8890A41EDC14A800DCD309 /* Resources */,
+				8D83D1C43A5912FA37B02D87 /* [CP] Embed Pods Frameworks */,
+				5B55658EBA3247DF2DB6F1C4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoldPrice;
+			productName = GoldPrice;
+			productReference = EF8890A61EDC14A800DCD309 /* GoldPrice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF8890B91EDC14A800DCD309 /* GoldPriceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF8890D11EDC14A800DCD309 /* Build configuration list for PBXNativeTarget "GoldPriceTests" */;
+			buildPhases = (
+				7356D7D1289B52F9261BAB2A /* [CP] Check Pods Manifest.lock */,
+				EF8890B61EDC14A800DCD309 /* Sources */,
+				EF8890B71EDC14A800DCD309 /* Frameworks */,
+				EF8890B81EDC14A800DCD309 /* Resources */,
+				8DC718E399B5A9139D404D80 /* [CP] Embed Pods Frameworks */,
+				95D5460D23206BB039A297B4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF8890BC1EDC14A800DCD309 /* PBXTargetDependency */,
+			);
+			name = GoldPriceTests;
+			productName = GoldPriceTests;
+			productReference = EF8890BA1EDC14A800DCD309 /* GoldPriceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF8890C41EDC14A800DCD309 /* GoldPriceUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF8890D41EDC14A800DCD309 /* Build configuration list for PBXNativeTarget "GoldPriceUITests" */;
+			buildPhases = (
+				3F1351372DA9A2AF1F8E7200 /* [CP] Check Pods Manifest.lock */,
+				EF8890C11EDC14A800DCD309 /* Sources */,
+				EF8890C21EDC14A800DCD309 /* Frameworks */,
+				EF8890C31EDC14A800DCD309 /* Resources */,
+				7DE4A56751A979AE348EA235 /* [CP] Embed Pods Frameworks */,
+				3B157F31A3A6550D9087D76C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF8890C71EDC14A800DCD309 /* PBXTargetDependency */,
+			);
+			name = GoldPriceUITests;
+			productName = GoldPriceUITests;
+			productReference = EF8890C51EDC14A800DCD309 /* GoldPriceUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF88909E1EDC14A800DCD309 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Phạm Thanh Hùng";
+				TargetAttributes = {
+					EF8890A51EDC14A800DCD309 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					EF8890B91EDC14A800DCD309 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EF8890A51EDC14A800DCD309;
+					};
+					EF8890C41EDC14A800DCD309 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EF8890A51EDC14A800DCD309;
+					};
+				};
+			};
+			buildConfigurationList = EF8890A11EDC14A800DCD309 /* Build configuration list for PBXProject "GoldPrice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF88909D1EDC14A800DCD309;
+			productRefGroup = EF8890A71EDC14A800DCD309 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF8890A51EDC14A800DCD309 /* GoldPrice */,
+				EF8890B91EDC14A800DCD309 /* GoldPriceTests */,
+				EF8890C41EDC14A800DCD309 /* GoldPriceUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF8890A41EDC14A800DCD309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8890D91EDC14D000DCD309 /* info_icon.png in Resources */,
+				EF8890DA1EDC14D000DCD309 /* info_icon2x.png in Resources */,
+				EF8890B41EDC14A800DCD309 /* LaunchScreen.storyboard in Resources */,
+				EF8890B11EDC14A800DCD309 /* Assets.xcassets in Resources */,
+				EF8890AF1EDC14A800DCD309 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8890B81EDC14A800DCD309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8890C31EDC14A800DCD309 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B157F31A3A6550D9087D76C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldPriceUITests/Pods-GoldPriceUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F1351372DA9A2AF1F8E7200 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B55658EBA3247DF2DB6F1C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldPrice/Pods-GoldPrice-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7356D7D1289B52F9261BAB2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7DE4A56751A979AE348EA235 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldPriceUITests/Pods-GoldPriceUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D83D1C43A5912FA37B02D87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldPrice/Pods-GoldPrice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DC718E399B5A9139D404D80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldPriceTests/Pods-GoldPriceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95D5460D23206BB039A297B4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoldPriceTests/Pods-GoldPriceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4EEB5CA03FA50C4F76100DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF8890A21EDC14A800DCD309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8890DF1EDC16A700DCD309 /* GoldPriceInfo.swift in Sources */,
+				EF8890E11EDC16BF00DCD309 /* PersonalInfo.swift in Sources */,
+				EF8890AC1EDC14A800DCD309 /* ViewController.swift in Sources */,
+				EF8890AA1EDC14A800DCD309 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8890B61EDC14A800DCD309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8890BF1EDC14A800DCD309 /* GoldPriceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF8890C11EDC14A800DCD309 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8890CA1EDC14A800DCD309 /* GoldPriceUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF8890BC1EDC14A800DCD309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF8890A51EDC14A800DCD309 /* GoldPrice */;
+			targetProxy = EF8890BB1EDC14A800DCD309 /* PBXContainerItemProxy */;
+		};
+		EF8890C71EDC14A800DCD309 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF8890A51EDC14A800DCD309 /* GoldPrice */;
+			targetProxy = EF8890C61EDC14A800DCD309 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF8890AD1EDC14A800DCD309 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF8890AE1EDC14A800DCD309 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF8890B21EDC14A800DCD309 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF8890B31EDC14A800DCD309 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF8890CC1EDC14A800DCD309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF8890CD1EDC14A800DCD309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF8890CF1EDC14A800DCD309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46517CB2E1170BEE99F8C13F /* Pods-GoldPrice.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = GoldPrice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phamhung.GoldPrice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EF8890D01EDC14A800DCD309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F105481A0EEC141EEDEDA62 /* Pods-GoldPrice.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = GoldPrice/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phamhung.GoldPrice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EF8890D21EDC14A800DCD309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A4A1BD6C7C9680AB57E6F36 /* Pods-GoldPriceTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoldPriceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phamhung.GoldPriceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldPrice.app/GoldPrice";
+			};
+			name = Debug;
+		};
+		EF8890D31EDC14A800DCD309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8932389C360EA2798594E5BF /* Pods-GoldPriceTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GoldPriceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phamhung.GoldPriceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldPrice.app/GoldPrice";
+			};
+			name = Release;
+		};
+		EF8890D51EDC14A800DCD309 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6271577D0A1FF643CAED315 /* Pods-GoldPriceUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = GoldPriceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phamhung.GoldPriceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GoldPrice;
+			};
+			name = Debug;
+		};
+		EF8890D61EDC14A800DCD309 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3606BF82555E183884D093CF /* Pods-GoldPriceUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = GoldPriceUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.phamhung.GoldPriceUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = GoldPrice;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF8890A11EDC14A800DCD309 /* Build configuration list for PBXProject "GoldPrice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF8890CC1EDC14A800DCD309 /* Debug */,
+				EF8890CD1EDC14A800DCD309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF8890CE1EDC14A800DCD309 /* Build configuration list for PBXNativeTarget "GoldPrice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF8890CF1EDC14A800DCD309 /* Debug */,
+				EF8890D01EDC14A800DCD309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF8890D11EDC14A800DCD309 /* Build configuration list for PBXNativeTarget "GoldPriceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF8890D21EDC14A800DCD309 /* Debug */,
+				EF8890D31EDC14A800DCD309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF8890D41EDC14A800DCD309 /* Build configuration list for PBXNativeTarget "GoldPriceUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF8890D51EDC14A800DCD309 /* Debug */,
+				EF8890D61EDC14A800DCD309 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF88909E1EDC14A800DCD309 /* Project object */;
+}
