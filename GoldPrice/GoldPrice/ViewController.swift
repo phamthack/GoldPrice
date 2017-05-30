@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/mm/yyyy"
@@ -42,8 +42,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.textColor = UIColor(hexString: "#9DCDEC")
         cell.textLabel?.text = newDate
         
-        cell.detailTextLabel?.attributedText = NSAttributedString(string: " ")
-        cell.detailTextLabel?.text = goldPriceInfoList[indexPath.row].amount
+        cell.detailTextLabel?.textColor = UIColor(hexString: "#9DCDEC")
+        cell.detailTextLabel?.text = String.init(format: "$%.2f",Double(goldPriceInfoList[indexPath.row].amount)!)
         
         cell.layoutSubviews()
         return cell
@@ -121,7 +121,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func setDateInfo() {
         let date = NSDate()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM-yyyy"
+        dateFormatter.dateFormat = "MMM yyyy"
         monthyearLabel.text = dateFormatter.string(from:date as Date)
         
         let dateFormatterDayOfWeek = DateFormatter()

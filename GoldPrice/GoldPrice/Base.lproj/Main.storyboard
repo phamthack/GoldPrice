@@ -178,7 +178,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPn-UG-BFj">
                                         <rect key="frame" x="227" y="140" width="83" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="23"/>
+                                        <fontDescription key="fontDescription" name="MyriadPro-Bold" family="Myriad Pro" pointSize="20"/>
                                         <state key="normal" title="CLOSE">
                                             <color key="titleColor" red="0.0" green="0.51481872797012329" blue="0.83044689893722534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
