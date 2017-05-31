@@ -162,6 +162,10 @@
                                         <rect key="frame" x="112" y="8" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.51481872797012329" blue="0.83044689893722534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="FX9-rn-MSq" appends="YES" id="kvg-7k-Bae"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pham Thanh Hung" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDh-bJ-APc">
                                         <rect key="frame" x="37" y="88" width="231" height="27"/>
@@ -201,6 +205,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oz5-KS-XHI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FX9-rn-MSq">
+                    <connections>
+                        <action selector="updateLoadImageTapped:" destination="Uxc-9n-aJN" id="EzR-qh-2WM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="772" y="120.98950524737631"/>
         </scene>

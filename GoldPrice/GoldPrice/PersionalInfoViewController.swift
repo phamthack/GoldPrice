@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PersionalInfoViewController: UIViewController {
+class PersionalInfoViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -29,8 +29,16 @@ class PersionalInfoViewController: UIViewController {
         avatarImageView.layer.borderColor = UIColor(hexString: "#0F85D1").cgColor
         avatarImageView.layer.cornerRadius = avatarImageView.frame.height/2
         avatarImageView.clipsToBounds = true
-        
+        avatarImageView.isUserInteractionEnabled = true
         showAnimate()
+        
+        if UserDefaults.standard.object(forKey: "avatar") != nil {
+            
+            if let image = UserDefaults.standard.object(forKey: "avatar") as? Data {
+                avatarImageView.image = UIImage(data: image)!
+
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +48,32 @@ class PersionalInfoViewController: UIViewController {
     
     @IBAction func closeTapped(_ sender: Any) {
         removeAnimate()
+    }
+    
+    @IBAction func updateLoadImageTapped(_ sender: Any) {
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagePickerController.allowsEditing = false
+        
+        self.present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            avatarImageView.image = image
+            
+            let defaults = UserDefaults.standard
+            defaults.set(UIImageJPEGRepresentation(avatarImageView.image!, 100), forKey: "avatar")
+            
+            defaults.synchronize()
+        } else {
+            print("error")
+        }
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     func showAnimate()
