@@ -144,20 +144,44 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func drawLineChartInfo() {
+        var listDate = [Double]()
+        var listAmount = [Double]()
+        
+        var chartPoints = [(Double, Double)]()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/mm/yyyy"
+        
+        for goldPriceInfo in goldPriceInfoList {
+            
+            let date = dateFormatter.date(from: goldPriceInfo.date)
+            let timeInterval = date?.timeIntervalSince1970
+            
+            // convert to Integer
+            let dateValue = Double(timeInterval!)
+            
+            listDate.append(dateValue)
+            listAmount.append(Double(goldPriceInfo.amount)!)
+            chartPoints.append((dateValue,Double(goldPriceInfo.amount)!))
+        }
+        
+        let guideLineConfig = GuidelinesConfig(dotted: true, lineWidth: 5, lineColor: UIColor(hexString: "#0F85D1"))
         
         let chartConfig = ChartConfigXY(
-            xAxisConfig: ChartAxisConfig(from: 2, to: 14, by: 2),
-            yAxisConfig: ChartAxisConfig(from: 0, to: 14, by: 2)
+            xAxisConfig: ChartAxisConfig(from: listDate.min()!, to: listDate.max()!, by: 1),
+            yAxisConfig: ChartAxisConfig(from: listAmount.min()!, to: listAmount.max()!, by: 1),
+            guidelinesConfig: guideLineConfig
         )
-        let frame = CGRect(x: 0, y: 0, width: 375, height: 139)
+        
+        let frame = CGRect(x: 0, y: 0, width: 300, height: 139)
         
         let chart = LineChart(
             frame: frame,
             chartConfig: chartConfig,
-            xTitle: "X axis",
-            yTitle: "Y axis",
+            xTitle: "Date",
+            yTitle: "Amount",
             lines: [
-                (chartPoints: [(2.0, 10.6), (4.2, 5.1), (7.3, 3.0), (8.1, 5.5), (14.0, 8.0)], color: UIColor(hexString: "#0F85D1"))
+                (chartPoints: chartPoints, color: UIColor(hexString: "#0F85D1"))
             ]
         )
         
