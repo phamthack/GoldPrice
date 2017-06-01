@@ -10,6 +10,11 @@ import UIKit
 import SwiftCharts
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let Color9DCDEC: UIColor = UIColor(hexString: "#9DCDEC")
+    let Color0F85D1: UIColor = UIColor(hexString: "#9DCDEC")
+    
+    var goldPriceInfoList = [GoldPriceInfo]()
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var lineChartView: UIView!
@@ -19,8 +24,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var monthyearLabel: UILabel!
         
     @IBOutlet weak var tableViewGoldPrice: UITableView!
-    
-    var goldPriceInfoList = [GoldPriceInfo]()
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -49,10 +52,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dateFormatter.dateFormat = "dd MMM yyyy"
         let newDate = dateFormatter.string(from: date!)
         
-        cell.textLabel?.textColor = UIColor(hexString: "#9DCDEC")
+        cell.textLabel?.textColor = Color9DCDEC
         cell.textLabel?.text = newDate
         
-        cell.detailTextLabel?.textColor = UIColor(hexString: "#9DCDEC")
+        cell.detailTextLabel?.textColor = Color9DCDEC
         cell.detailTextLabel?.text = String.init(format: "$%.2f",Double(goldPriceInfoList[indexPath.row].amount)!)
         
         cell.layoutSubviews()
@@ -64,34 +67,45 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
         setDateInfo()
         
-        let url = "https://rth-recruitment.herokuapp.com/api/prices/chart_data"
-        
-        get_data_from_url(url: url)
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showPersionalInfo))
         titleLabel.isUserInteractionEnabled = true
         titleLabel.addGestureRecognizer(tapGesture)
-    }
-    
-    func handleTap(_tapGesture: UITapGestureRecognizer) {
         
-        let popvc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "persional_info_view") as! PersionalInfoViewController
-
-        self.addChildViewController(popvc)
-        
-        popvc.view.frame = self.view.frame
-        
-        self.view.addSubview(popvc.view)
-        
-        popvc.didMove(toParentViewController: self)
-        
+        let url = "https://rth-recruitment.herokuapp.com/api/prices/chart_data"
+        get_data_from_url(url: url)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func setDateInfo() {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM yyyy"
+        monthyearLabel.text = dateFormatter.string(from:date as Date)
+        
+        dateFormatter.dateFormat  = "EEEE"
+        weekdaysLabel.text = dateFormatter.string(from:date as Date)
+        
+        dateFormatter.dateFormat  = "dd"
+        dateLabel.text = dateFormatter.string(from:date as Date)
+    }
+    
+    func showPersionalInfo(_tapGesture: UITapGestureRecognizer) {
+        
+        let persionalInfoViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "persional_info_view") as! PersionalInfoViewController
 
+        self.addChildViewController(persionalInfoViewController)
+        
+        persionalInfoViewController.view.frame = self.view.frame
+        
+        self.view.addSubview(persionalInfoViewController.view)
+        
+        persionalInfoViewController.didMove(toParentViewController: self)
+    }
+    
     func get_data_from_url(url:String)
     {
         var request = URLRequest(url: URL(string: url)!)
@@ -119,28 +133,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.goldPriceInfoList.sort(by: { $0.date > $1.date })
                     self.tableViewGoldPrice.reloadData()
                     
-                    self.drawLineChartInfo()
+                    let queue = DispatchQueue(label: "drawLineChartInfo")
+                    queue.async {
+                        
+                        self.drawLineChartInfo()
+                    }
+                    
                 })
             }
             catch {
                 self.showMessage(_message: error.localizedDescription)
             }
             }.resume()
-    }
-    
-    func setDateInfo() {
-        let date = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM yyyy"
-        monthyearLabel.text = dateFormatter.string(from:date as Date)
-        
-        let dateFormatterDayOfWeek = DateFormatter()
-        dateFormatterDayOfWeek.dateFormat  = "EEEE"
-        weekdaysLabel.text = dateFormatterDayOfWeek.string(from:date as Date)
-        
-        let dateFormatterDay = DateFormatter()
-        dateFormatterDay.dateFormat  = "dd"
-        dateLabel.text = dateFormatterDay.string(from:date as Date)
     }
     
     func drawLineChartInfo() {
@@ -165,7 +169,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             chartPoints.append((dateValue,Double(goldPriceInfo.amount)!))
         }
         
-        let guideLineConfig = GuidelinesConfig(dotted: true, lineWidth: 5, lineColor: UIColor(hexString: "#0F85D1"))
+        let guideLineConfig = GuidelinesConfig(dotted: true, lineWidth: 5, lineColor: Color0F85D1)
         
         let chartConfig = ChartConfigXY(
             xAxisConfig: ChartAxisConfig(from: listDate.min()!, to: listDate.max()!, by: 1),
@@ -181,7 +185,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             xTitle: "Date",
             yTitle: "Amount",
             lines: [
-                (chartPoints: chartPoints, color: UIColor(hexString: "#0F85D1"))
+                (chartPoints: chartPoints, color: Color0F85D1)
             ]
         )
         
