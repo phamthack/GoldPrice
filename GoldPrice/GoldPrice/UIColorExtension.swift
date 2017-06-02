@@ -27,3 +27,14 @@ extension UIColor {
         self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
     }
 }
+
+extension String {
+    func size(withSystemFontSize pointSize: CGFloat) -> CGSize {
+        return (self as NSString).size(attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: pointSize)])
+    }
+}
+
+extension CGPoint {
+    func adding(x: CGFloat) -> CGPoint { return CGPoint(x: self.x + x, y: self.y) }
+    func adding(y: CGFloat) -> CGPoint { return CGPoint(x: self.x, y: self.y + y) }
+}

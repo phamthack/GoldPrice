@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A60314D6B324BD6F8C177782 /* Pods_GoldPriceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40851A20B8278C19903644B /* Pods_GoldPriceUITests.framework */; };
 		D2C8B309DB4F0AD8CF255BA2 /* Pods_GoldPriceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35A8EF5E7302CCCAF22BD91 /* Pods_GoldPriceTests.framework */; };
+		EF1AA7AC1EE128DD0062DF1D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AA7AB1EE128DD0062DF1D /* LineChartView.swift */; };
 		EF8890AA1EDC14A800DCD309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890A91EDC14A800DCD309 /* AppDelegate.swift */; };
 		EF8890AC1EDC14A800DCD309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890AB1EDC14A800DCD309 /* ViewController.swift */; };
 		EF8890AF1EDC14A800DCD309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8890AD1EDC14A800DCD309 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		8932389C360EA2798594E5BF /* Pods-GoldPriceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoldPriceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoldPriceTests/Pods-GoldPriceTests.release.xcconfig"; sourceTree = "<group>"; };
 		A40851A20B8278C19903644B /* Pods_GoldPriceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldPriceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35A8EF5E7302CCCAF22BD91 /* Pods_GoldPriceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldPriceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1AA7AB1EE128DD0062DF1D /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		EF8890A61EDC14A800DCD309 /* GoldPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8890A91EDC14A800DCD309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8890AB1EDC14A800DCD309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EF1AA7AA1EE128C30062DF1D /* LineChartView */ = {
+			isa = PBXGroup;
+			children = (
+				EF1AA7AB1EE128DD0062DF1D /* LineChartView.swift */,
+			);
+			name = LineChartView;
+			sourceTree = "<group>";
+		};
 		EF88909D1EDC14A800DCD309 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		EF8890A81EDC14A800DCD309 /* GoldPrice */ = {
 			isa = PBXGroup;
 			children = (
+				EF1AA7AA1EE128C30062DF1D /* LineChartView */,
 				EFB6E1311EDDD2790073180F /* Extensions */,
 				EFB6E12E1EDDCFB00073180F /* PersionalInfo */,
 				EF8890DD1EDC159800DCD309 /* ClassInfo */,
@@ -513,6 +524,7 @@
 				EF8890DF1EDC16A700DCD309 /* GoldPriceInfo.swift in Sources */,
 				EF8890E11EDC16BF00DCD309 /* PersonalInfo.swift in Sources */,
 				EF8890AC1EDC14A800DCD309 /* ViewController.swift in Sources */,
+				EF1AA7AC1EE128DD0062DF1D /* LineChartView.swift in Sources */,
 				EFB6E1301EDDCFDB0073180F /* PersionalInfoViewController.swift in Sources */,
 				EF8890AA1EDC14A800DCD309 /* AppDelegate.swift in Sources */,
 				EFB6E1331EDDD2900073180F /* UIColorExtension.swift in Sources */,

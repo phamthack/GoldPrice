@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var goldPriceInfoList = [GoldPriceInfo]()
 
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var lineChartView: UIView!
+    @IBOutlet weak var lineChartView: LineChartView!
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var weekdaysLabel: UILabel!
@@ -148,48 +148,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func drawLineChartInfo() {
-        var listDate = [Double]()
-        var listAmount = [Double]()
         
-        var chartPoints = [(Double, Double)]()
+        var chartPoints = [(CGPoint)]()
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/mm/yyyy"
-        
-        for goldPriceInfo in goldPriceInfoList {
+        for goldPriceInfo in goldPriceInfoList.sorted(by: { $0.date > $1.date }) {
+            let index = goldPriceInfo.date.index(goldPriceInfo.date.startIndex, offsetBy: 2)
+            let day = Double(goldPriceInfo.date.substring(to: index))
             
-            let date = dateFormatter.date(from: goldPriceInfo.date)
-            let timeInterval = date?.timeIntervalSince1970
-            
-            // convert to Integer
-            let dateValue = Double(timeInterval!)
-            
-            listDate.append(dateValue)
-            listAmount.append(Double(goldPriceInfo.amount)!)
-            chartPoints.append((dateValue,Double(goldPriceInfo.amount)!))
+            chartPoints.append(CGPoint(x: day!,y: Double(goldPriceInfo.amount)!))
         }
+
+        lineChartView.deltaX = 10
+        lineChartView.deltaY = 10
         
-        let guideLineConfig = GuidelinesConfig(dotted: true, lineWidth: 5, lineColor: Color0F85D1)
+        lineChartView.plot(chartPoints)
         
-        let chartConfig = ChartConfigXY(
-            xAxisConfig: ChartAxisConfig(from: listDate.min()!, to: listDate.max()!, by: 1),
-            yAxisConfig: ChartAxisConfig(from: listAmount.min()!, to: listAmount.max()!, by: 1),
-            guidelinesConfig: guideLineConfig
-        )
-        
-        let frame = CGRect(x: 0, y: 0, width: 300, height: 139)
-        
-        let chart = LineChart(
-            frame: frame,
-            chartConfig: chartConfig,
-            xTitle: "Date",
-            yTitle: "Amount",
-            lines: [
-                (chartPoints: chartPoints, color: Color0F85D1)
-            ]
-        )
-        
-        self.lineChartView.addSubview(chart.view)
     }
     
     func showMessage(_message: String) {
