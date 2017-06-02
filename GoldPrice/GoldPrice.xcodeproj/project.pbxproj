@@ -10,6 +10,8 @@
 		A60314D6B324BD6F8C177782 /* Pods_GoldPriceUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40851A20B8278C19903644B /* Pods_GoldPriceUITests.framework */; };
 		D2C8B309DB4F0AD8CF255BA2 /* Pods_GoldPriceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B35A8EF5E7302CCCAF22BD91 /* Pods_GoldPriceTests.framework */; };
 		EF1AA7AC1EE128DD0062DF1D /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1AA7AB1EE128DD0062DF1D /* LineChartView.swift */; };
+		EF747B5D1EE13EFA00645B20 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF747B5C1EE13EFA00645B20 /* StringExtensions.swift */; };
+		EF747B5F1EE13F0B00645B20 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF747B5E1EE13F0B00645B20 /* CGPointExtensions.swift */; };
 		EF8890AA1EDC14A800DCD309 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890A91EDC14A800DCD309 /* AppDelegate.swift */; };
 		EF8890AC1EDC14A800DCD309 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8890AB1EDC14A800DCD309 /* ViewController.swift */; };
 		EF8890AF1EDC14A800DCD309 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8890AD1EDC14A800DCD309 /* Main.storyboard */; };
@@ -53,6 +55,8 @@
 		A40851A20B8278C19903644B /* Pods_GoldPriceUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldPriceUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35A8EF5E7302CCCAF22BD91 /* Pods_GoldPriceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoldPriceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1AA7AB1EE128DD0062DF1D /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		EF747B5C1EE13EFA00645B20 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		EF747B5E1EE13F0B00645B20 /* CGPointExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
 		EF8890A61EDC14A800DCD309 /* GoldPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoldPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8890A91EDC14A800DCD309 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8890AB1EDC14A800DCD309 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 			isa = PBXGroup;
 			children = (
 				EFB6E1321EDDD2900073180F /* UIColorExtension.swift */,
+				EF747B5C1EE13EFA00645B20 /* StringExtensions.swift */,
+				EF747B5E1EE13F0B00645B20 /* CGPointExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -521,12 +527,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF747B5D1EE13EFA00645B20 /* StringExtensions.swift in Sources */,
 				EF8890DF1EDC16A700DCD309 /* GoldPriceInfo.swift in Sources */,
 				EF8890E11EDC16BF00DCD309 /* PersonalInfo.swift in Sources */,
 				EF8890AC1EDC14A800DCD309 /* ViewController.swift in Sources */,
 				EF1AA7AC1EE128DD0062DF1D /* LineChartView.swift in Sources */,
 				EFB6E1301EDDCFDB0073180F /* PersionalInfoViewController.swift in Sources */,
 				EF8890AA1EDC14A800DCD309 /* AppDelegate.swift in Sources */,
+				EF747B5F1EE13F0B00645B20 /* CGPointExtensions.swift in Sources */,
 				EFB6E1331EDDD2900073180F /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
